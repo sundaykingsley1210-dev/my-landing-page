@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -16,6 +20,61 @@ body {
     padding: 0 20px;
 }
 
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #ffd700;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffd700;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -25,13 +84,20 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 120px 20px 60px;
+}
+
+.hero-content .hero-greeting {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease;
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
-    animation: fadeInUp 1s ease;
+    animation: fadeInUp 1s ease 0.1s backwards;
 }
 
 .hero-content .highlight {
@@ -69,12 +135,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* About Section */
-.about-section {
-    padding: 100px 0;
-    background: #f8f9fa;
-}
-
+/* Section Title */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -92,11 +153,20 @@ body {
     margin: 15px auto 0;
 }
 
+/* About Section */
+.about-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
     gap: 50px;
     align-items: center;
+}
+
+.about-image {
+    flex: 0 0 350px;
 }
 
 .about-image img {
@@ -108,6 +178,10 @@ body {
 
 .about-image img:hover {
     transform: scale(1.05);
+}
+
+.about-text {
+    flex: 1;
 }
 
 .about-text h3 {
@@ -143,7 +217,7 @@ body {
 .service-card {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 40px 30px;
+    padding: 30px;
     border-radius: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -154,10 +228,15 @@ body {
     box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
 }
 
-.service-card i {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #ffd700;
+.service-icon {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 20px;
+}
+
+.service-icon svg {
+    width: 100%;
+    height: auto;
 }
 
 .service-card h3 {
@@ -170,29 +249,63 @@ body {
     opacity: 0.9;
 }
 
-/* Gallery Section */
-.gallery-section {
+/* Drive For Tech Section */
+.drive-section {
     padding: 100px 0;
     background: #f8f9fa;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.drive-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
 }
 
-.gallery-item img {
+.drive-image {
+    flex: 0 0 400px;
+}
+
+.drive-image img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     transition: transform 0.3s;
 }
 
-.gallery-item img:hover {
-    transform: scale(1.05);
+.drive-image img:hover {
+    transform: scale(1.03);
+}
+
+.drive-text {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    border-left: 5px solid #667eea;
+}
+
+.drive-text h3 {
+    font-size: 1.8rem;
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.drive-text p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.drive-quote {
+    font-size: 1.2rem !important;
+    color: #764ba2 !important;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 25px !important;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
 }
 
 /* Contact Section */
@@ -218,10 +331,11 @@ body {
 }
 
 .contact-methods {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 30px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .contact-card {
@@ -230,6 +344,9 @@ body {
     border-radius: 20px;
     backdrop-filter: blur(10px);
     transition: transform 0.3s;
+    min-width: 250px;
+    flex: 1;
+    max-width: 350px;
 }
 
 .contact-card:hover {
@@ -249,9 +366,10 @@ body {
 
 .contact-card a {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
     transition: color 0.3s;
+    word-break: break-all;
 }
 
 .contact-card a:hover {
@@ -262,6 +380,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .social-btn {
@@ -275,13 +394,26 @@ body {
     border-radius: 50%;
     font-size: 1.5rem;
     text-decoration: none;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
 }
 
 .social-btn:hover {
     transform: scale(1.1);
-    background: #ffd700;
-    color: #333;
+}
+
+.whatsapp-btn:hover {
+    background: #25d366;
+    color: white;
+}
+
+.gmail-btn:hover {
+    background: #ea4335;
+    color: white;
+}
+
+.phone-btn:hover {
+    background: #667eea;
+    color: white;
 }
 
 /* Footer */
@@ -292,8 +424,7 @@ body {
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     gap: 40px;
     align-items: center;
     margin-bottom: 40px;
@@ -345,23 +476,126 @@ body {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
+/* ============ RESPONSIVE ============ */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .about-content,
+    .drive-content {
+        flex-direction: column;
     }
-    
-    .about-content {
-        grid-template-columns: 1fr;
+
+    .about-image,
+    .drive-image {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
     }
-    
+
     .footer-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         text-align: center;
     }
-    
-    .footer-image {
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(26, 26, 46, 0.98);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-menu.active {
         display: flex;
-        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-content .tagline {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .drive-text {
+        padding: 25px;
+    }
+
+    .drive-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .drive-text p {
+        font-size: 0.95rem;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 100%;
+    }
+
+    .footer-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .footer-image img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content .hero-greeting {
+        font-size: 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
     }
 }

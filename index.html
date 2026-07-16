@@ -5,14 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DKings Dev - Web Development Enterprise</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">DKings Dev</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#drive" class="nav-link">Drive For Tech</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Hello! I'm <span class="highlight">DKings Dev!</span></h1>
+            <p class="hero-greeting">Hello! I'm</p>
+            <h1><span class="highlight">DKings Dev!</span></h1>
             <p class="subtitle">Welcome to my landing page</p>
             <p class="tagline">Creating Digital Experiences That Matter</p>
             <a href="#contact" class="cta-button">Get In Touch</a>
@@ -43,22 +60,70 @@
             <h2 class="section-title">My Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <i class="fas fa-code"></i>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="150" rx="10" fill="#1a1a2e"/>
+                            <rect x="20" y="15" width="160" height="90" rx="5" fill="#2d2d44"/>
+                            <rect x="30" y="25" width="60" height="8" rx="2" fill="#667eea"/>
+                            <rect x="30" y="40" width="80" height="6" rx="2" fill="#444"/>
+                            <rect x="30" y="52" width="50" height="6" rx="2" fill="#444"/>
+                            <rect x="30" y="64" width="70" height="6" rx="2" fill="#444"/>
+                            <rect x="30" y="76" width="40" height="6" rx="2" fill="#ffd700"/>
+                            <text x="100" y="125" text-anchor="middle" fill="#667eea" font-size="11" font-family="monospace">&lt;/&gt; Code</text>
+                        </svg>
+                    </div>
                     <h3>Web Development</h3>
                     <p>Custom websites and web applications built with modern technologies. Responsive, fast, and optimized for search engines.</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-chart-line"></i>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="150" rx="10" fill="#1a1a2e"/>
+                            <rect x="20" y="15" width="160" height="90" rx="5" fill="#2d2d44"/>
+                            <polyline points="30,80 55,55 80,65 105,35 130,50 155,25 170,35" fill="none" stroke="#00c853" stroke-width="3"/>
+                            <circle cx="30" cy="80" r="3" fill="#00c853"/>
+                            <circle cx="55" cy="55" r="3" fill="#00c853"/>
+                            <circle cx="80" cy="65" r="3" fill="#00c853"/>
+                            <circle cx="105" cy="35" r="3" fill="#00c853"/>
+                            <circle cx="130" cy="50" r="3" fill="#00c853"/>
+                            <circle cx="155" cy="25" r="3" fill="#00c853"/>
+                            <text x="100" y="125" text-anchor="middle" fill="#ffd700" font-size="11" font-family="monospace">📈 Investment</text>
+                        </svg>
+                    </div>
                     <h3>Investment Platform</h3>
                     <p>Secure and reliable investment platforms with real-time tracking, user dashboards, and payment integration.</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-file-alt"></i>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="150" rx="10" fill="#1a1a2e"/>
+                            <rect x="20" y="15" width="160" height="90" rx="5" fill="#2d2d44"/>
+                            <rect x="35" y="25" width="130" height="12" rx="3" fill="#444"/>
+                            <rect x="40" y="28" width="60" height="6" rx="1" fill="#667eea"/>
+                            <rect x="35" y="45" width="130" height="12" rx="3" fill="#444"/>
+                            <rect x="40" y="48" width="45" height="6" rx="1" fill="#ffd700"/>
+                            <rect x="35" y="65" width="130" height="12" rx="3" fill="#444"/>
+                            <rect x="40" y="68" width="80" height="6" rx="1" fill="#00c853"/>
+                            <rect x="35" y="85" width="130" height="12" rx="3" fill="#444"/>
+                            <rect x="40" y="88" width="55" height="6" rx="1" fill="#ff6b6b"/>
+                            <text x="100" y="125" text-anchor="middle" fill="#667eea" font-size="11" font-family="monospace">📋 Survey</text>
+                        </svg>
+                    </div>
                     <h3>Survey Landing Pages</h3>
                     <p>Engaging survey pages designed to collect valuable feedback and data from your target audience.</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-video"></i>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="150" rx="10" fill="#1a1a2e"/>
+                            <rect x="20" y="15" width="160" height="90" rx="5" fill="#2d2d44"/>
+                            <polygon points="85,40 85,80 120,60" fill="#ffd700"/>
+                            <circle cx="100" cy="60" r="35" fill="none" stroke="#667eea" stroke-width="3"/>
+                            <rect x="130" y="75" width="40" height="8" rx="2" fill="#ff6b6b"/>
+                            <rect x="130" y="85" width="28" height="8" rx="2" fill="#444"/>
+                            <text x="100" y="125" text-anchor="middle" fill="#ffd700" font-size="11" font-family="monospace">🎬 Video Edit</text>
+                        </svg>
+                    </div>
                     <h3>Video Editing</h3>
                     <p>Professional video editing services to create compelling content for your brand and marketing campaigns.</p>
                 </div>
@@ -66,19 +131,20 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
+    <!-- Drive For Tech Section -->
+    <section id="drive" class="drive-section">
         <div class="container">
-            <h2 class="section-title">My Work</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="image1 deploy.jpeg" alt="Project 1">
+            <h2 class="section-title">Drive For Tech</h2>
+            <div class="drive-content">
+                <div class="drive-image">
+                    <img src="/image1 deploy.jpeg" alt="DKings Dev - Drive For Tech">
                 </div>
-                <div class="gallery-item">
-                    <img src="image3 deploy.jpeg" alt="Project 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="image deploy.jpeg" alt="Project 3">
+                <div class="drive-text">
+                    <h1>Driven by Passion, Inspired by Technology</h1>
+                    <p> <span style="background-color: brown;color: white;">Technology</span> is more than a career to me <br>it's my <span style="background-color: brown;color: white;">passion</span> and <span style="background-color: brown;color: white;">purpose</span>. I enjoy creating innovative <br>digital solutions that solve real-world problems <br>and make a meaningful impact. Every <span style="background-color: brown;color: white;">project</span> is an opportunity to learn,<br> grow, and deliver value through <br> creativity and innovation.
+I am committed to continuous learning,<br> embracing new <span style="background-color: brown;color: white;">technologies</span> and building solutions that <br> empower individuals and businesses. My goal is not just to <br>develop software but to create experiences that inspire,<br> transform, and drive success.
+"I don't just build <span style="background-color: brown;color: white;">technology</span> <br> I build solutions that make a difference."
+</p>
                 </div>
             </div>
         </div>
@@ -93,18 +159,18 @@
                 <div class="contact-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email Me</h3>
-                    <a href="mailto:spnewman1210@gmail.com">spnewman1210@gmail.com</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=spnewman1210@gmail.com" target="_blank">spnewman1210@gmail.com</a>
                 </div>
                 <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Call/WhatsApp Me</h3>
-                    <a href="tel:+2348039392007">08039392007</a>
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp Me</h3>
+                    <a href="https://wa.me/2348039392007?text=Hello%20DKings%20Dev!%20I%20saw%20your%20landing%20page%20and%20I'm%20interested%20in%20your%20services." target="_blank">08039392007</a>
                 </div>
             </div>
             <div class="social-links">
-                <a href="mailto:spnewman1210@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+2348039392007" class="social-btn"><i class="fas fa-phone"></i></a>
-                <a href="https://wa.me/2348039392007" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=spnewman1210@gmail.com" target="_blank" class="social-btn gmail-btn"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/2348039392007?text=Hello%20DKings%20Dev!%20I%20saw%20your%20landing%20page%20and%20I'm%20interested%20in%20your%20services." target="_blank" class="social-btn whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:+2348039392007" class="social-btn phone-btn"><i class="fas fa-phone"></i></a>
             </div>
         </div>
     </section>
@@ -114,7 +180,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-image">
-                    <img src="image deploy.jpeg" alt="DKings Dev">
+                    <img src="image1 deploy.jpeg" alt="DKings Dev">
                 </div>
                 <div class="footer-info">
                     <h3>DKings Dev</h3>
@@ -127,5 +193,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        // Close menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
