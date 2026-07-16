@@ -202,6 +202,15 @@ body {
     margin-bottom: 15px;
 }
 
+/* Shadow Card */
+.shadow-card {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+
 /* Services Section */
 .services-section {
     padding: 100px 0;
