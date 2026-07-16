@@ -425,6 +425,16 @@ body {
     color: white;
 }
 
+.facebook-btn:hover {
+    background: #1877f2;
+    color: white;
+}
+
+.github-btn:hover {
+    background: #333;
+    color: white;
+}
+
 /* Footer */
 .footer {
     background: #1a1a2e;
